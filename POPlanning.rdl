@@ -1,0 +1,269 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DataSource">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+      <rd:SecurityType>None</rd:SecurityType>
+    </DataSource>
+  </DataSources>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <Height>2in</Height>
+        <Style />
+      </Body>
+      <Width>6.5in</Width>
+      <Page>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <Code>Public Function BlankZero(ByVal Value As Decimal)
+    if Value = 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankPos(ByVal Value As Decimal)
+    if Value &gt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankZeroAndPos(ByVal Value As Decimal)
+    if Value &gt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNeg(ByVal Value As Decimal)
+    if Value &lt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNegAndZero(ByVal Value As Decimal)
+    if Value &lt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+</Code>
+  <Language>=User!Language</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="Grade_Item">
+          <DataField>Grade_Item</DataField>
+        </Field>
+        <Field Name="location1">
+          <DataField>location1</DataField>
+        </Field>
+        <Field Name="Srno">
+          <DataField>Srno</DataField>
+        </Field>
+        <Field Name="location">
+          <DataField>location</DataField>
+        </Field>
+        <Field Name="ItemNo">
+          <DataField>ItemNo</DataField>
+        </Field>
+        <Field Name="Description">
+          <DataField>Description</DataField>
+        </Field>
+        <Field Name="VendorItem">
+          <DataField>VendorItem</DataField>
+        </Field>
+        <Field Name="ItemProductGrpCode">
+          <DataField>ItemProductGrpCode</DataField>
+        </Field>
+        <Field Name="Primcategory">
+          <DataField>Primcategory</DataField>
+        </Field>
+        <Field Name="SecondCategory">
+          <DataField>SecondCategory</DataField>
+        </Field>
+        <Field Name="ThirdCategory">
+          <DataField>ThirdCategory</DataField>
+        </Field>
+        <Field Name="FORMAT_TODAY_0_4_">
+          <DataField>FORMAT_TODAY_0_4_</DataField>
+        </Field>
+        <Field Name="CurrReport_PAGENO">
+          <DataField>CurrReport_PAGENO</DataField>
+        </Field>
+        <Field Name="CompInfoName">
+          <DataField>CompInfoName</DataField>
+        </Field>
+        <Field Name="CompInfoLogo">
+          <DataField>CompInfoLogo</DataField>
+        </Field>
+        <Field Name="CurMonthCaption">
+          <DataField>CurMonthCaption</DataField>
+        </Field>
+        <Field Name="LastMon1Caption">
+          <DataField>LastMon1Caption</DataField>
+        </Field>
+        <Field Name="LastMon2Caption">
+          <DataField>LastMon2Caption</DataField>
+        </Field>
+        <Field Name="LastMon3Caption">
+          <DataField>LastMon3Caption</DataField>
+        </Field>
+        <Field Name="Inventory_Item">
+          <DataField>Inventory_Item</DataField>
+        </Field>
+        <Field Name="Inventory_ItemFormat">
+          <DataField>Inventory_ItemFormat</DataField>
+        </Field>
+        <Field Name="UnitCost_Item">
+          <DataField>UnitCost_Item</DataField>
+        </Field>
+        <Field Name="UnitCost_ItemFormat">
+          <DataField>UnitCost_ItemFormat</DataField>
+        </Field>
+        <Field Name="zone">
+          <DataField>zone</DataField>
+        </Field>
+        <Field Name="statenm">
+          <DataField>statenm</DataField>
+        </Field>
+        <Field Name="LocationCode">
+          <DataField>LocationCode</DataField>
+        </Field>
+        <Field Name="StockInHandUnit">
+          <DataField>StockInHandUnit</DataField>
+        </Field>
+        <Field Name="StockInHandUnitFormat">
+          <DataField>StockInHandUnitFormat</DataField>
+        </Field>
+        <Field Name="StockInHandValue">
+          <DataField>StockInHandValue</DataField>
+        </Field>
+        <Field Name="StockInHandValueFormat">
+          <DataField>StockInHandValueFormat</DataField>
+        </Field>
+        <Field Name="StockInHandValue1">
+          <DataField>StockInHandValue1</DataField>
+        </Field>
+        <Field Name="StockInHandValue1Format">
+          <DataField>StockInHandValue1Format</DataField>
+        </Field>
+        <Field Name="CurMonUnit">
+          <DataField>CurMonUnit</DataField>
+        </Field>
+        <Field Name="CurMonUnitFormat">
+          <DataField>CurMonUnitFormat</DataField>
+        </Field>
+        <Field Name="CurMonValue">
+          <DataField>CurMonValue</DataField>
+        </Field>
+        <Field Name="CurMonValueFormat">
+          <DataField>CurMonValueFormat</DataField>
+        </Field>
+        <Field Name="LastMon1Unit">
+          <DataField>LastMon1Unit</DataField>
+        </Field>
+        <Field Name="LastMon1UnitFormat">
+          <DataField>LastMon1UnitFormat</DataField>
+        </Field>
+        <Field Name="LastMon1Value">
+          <DataField>LastMon1Value</DataField>
+        </Field>
+        <Field Name="LastMon1ValueFormat">
+          <DataField>LastMon1ValueFormat</DataField>
+        </Field>
+        <Field Name="LastMon2Unit">
+          <DataField>LastMon2Unit</DataField>
+        </Field>
+        <Field Name="LastMon2UnitFormat">
+          <DataField>LastMon2UnitFormat</DataField>
+        </Field>
+        <Field Name="LastMon2Value">
+          <DataField>LastMon2Value</DataField>
+        </Field>
+        <Field Name="LastMon2ValueFormat">
+          <DataField>LastMon2ValueFormat</DataField>
+        </Field>
+        <Field Name="LastMon3Unit">
+          <DataField>LastMon3Unit</DataField>
+        </Field>
+        <Field Name="LastMon3UnitFormat">
+          <DataField>LastMon3UnitFormat</DataField>
+        </Field>
+        <Field Name="LastMon3Value">
+          <DataField>LastMon3Value</DataField>
+        </Field>
+        <Field Name="LastMon3ValueFormat">
+          <DataField>LastMon3ValueFormat</DataField>
+        </Field>
+        <Field Name="StockInTransUnit">
+          <DataField>StockInTransUnit</DataField>
+        </Field>
+        <Field Name="StockInTransUnitFormat">
+          <DataField>StockInTransUnitFormat</DataField>
+        </Field>
+        <Field Name="StockInTransValue">
+          <DataField>StockInTransValue</DataField>
+        </Field>
+        <Field Name="StockInTransValueFormat">
+          <DataField>StockInTransValueFormat</DataField>
+        </Field>
+        <Field Name="POQty">
+          <DataField>POQty</DataField>
+        </Field>
+        <Field Name="POQtyFormat">
+          <DataField>POQtyFormat</DataField>
+        </Field>
+        <Field Name="POValue">
+          <DataField>POValue</DataField>
+        </Field>
+        <Field Name="POValueFormat">
+          <DataField>POValueFormat</DataField>
+        </Field>
+        <Field Name="DIOvalue">
+          <DataField>DIOvalue</DataField>
+        </Field>
+        <Field Name="DIOvalueFormat">
+          <DataField>DIOvalueFormat</DataField>
+        </Field>
+        <Field Name="StoreAgeUnit">
+          <DataField>StoreAgeUnit</DataField>
+        </Field>
+        <Field Name="StoreAgeUnitFormat">
+          <DataField>StoreAgeUnitFormat</DataField>
+        </Field>
+        <Field Name="NoOfAgeUnit">
+          <DataField>NoOfAgeUnit</DataField>
+        </Field>
+        <Field Name="CompAge">
+          <DataField>CompAge</DataField>
+        </Field>
+        <Field Name="NoOfCompAge">
+          <DataField>NoOfCompAge</DataField>
+        </Field>
+        <Field Name="DIOSaleValue">
+          <DataField>DIOSaleValue</DataField>
+        </Field>
+        <Field Name="DIOSaleValueFormat">
+          <DataField>DIOSaleValueFormat</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
+</Report>

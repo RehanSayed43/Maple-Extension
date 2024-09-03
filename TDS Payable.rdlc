@@ -1,0 +1,206 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DataSource">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+      <rd:SecurityType>None</rd:SecurityType>
+    </DataSource>
+  </DataSources>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <Height>2in</Height>
+        <Style />
+      </Body>
+      <Width>6.5in</Width>
+      <Page>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <Code>Public Function BlankZero(ByVal Value As Decimal)
+    if Value = 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankPos(ByVal Value As Decimal)
+    if Value &gt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankZeroAndPos(ByVal Value As Decimal)
+    if Value &gt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNeg(ByVal Value As Decimal)
+    if Value &lt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNegAndZero(ByVal Value As Decimal)
+    if Value &lt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+</Code>
+  <Language>=User!Language</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="FORMAT_TODAY_0_4_">
+          <DataField>FORMAT_TODAY_0_4_</DataField>
+        </Field>
+        <Field Name="COMPANYNAME">
+          <DataField>COMPANYNAME</DataField>
+        </Field>
+        <Field Name="CurrReport_PAGENO">
+          <DataField>CurrReport_PAGENO</DataField>
+        </Field>
+        <Field Name="USERID">
+          <DataField>USERID</DataField>
+        </Field>
+        <Field Name="Sales_Invoice_Header__GETFILTERS">
+          <DataField>Sales_Invoice_Header__GETFILTERS</DataField>
+        </Field>
+        <Field Name="TDS_Entry__Document_No__">
+          <DataField>TDS_Entry__Document_No__</DataField>
+        </Field>
+        <Field Name="TDS_Entry__Posting_Date_">
+          <DataField>TDS_Entry__Posting_Date_</DataField>
+        </Field>
+        <Field Name="TDS_Entry__Deductee_P_A_N__No__">
+          <DataField>TDS_Entry__Deductee_P_A_N__No__</DataField>
+        </Field>
+        <Field Name="TDS_Entry__TDS_Base_Amount_">
+          <DataField>TDS_Entry__TDS_Base_Amount_</DataField>
+        </Field>
+        <Field Name="TDS_Entry__TDS_Base_Amount_Format">
+          <DataField>TDS_Entry__TDS_Base_Amount_Format</DataField>
+        </Field>
+        <Field Name="TDS_Entry__TDS_Amount_Including_Surcharge_">
+          <DataField>TDS_Entry__TDS_Amount_Including_Surcharge_</DataField>
+        </Field>
+        <Field Name="TDS_Entry__TDS_Amount_Including_Surcharge_Format">
+          <DataField>TDS_Entry__TDS_Amount_Including_Surcharge_Format</DataField>
+        </Field>
+        <Field Name="TDS_Entry__Assessee_Code_">
+          <DataField>TDS_Entry__Assessee_Code_</DataField>
+        </Field>
+        <Field Name="TDS_Entry__TDS_Nature_of_Deduction_">
+          <DataField>TDS_Entry__TDS_Nature_of_Deduction_</DataField>
+        </Field>
+        <Field Name="TDS_Entry__TDS_Amount_Including_Surcharge__Control1102159020">
+          <DataField>TDS_Entry__TDS_Amount_Including_Surcharge__Control1102159020</DataField>
+        </Field>
+        <Field Name="TDS_Entry__TDS_Amount_Including_Surcharge__Control1102159020Format">
+          <DataField>TDS_Entry__TDS_Amount_Including_Surcharge__Control1102159020Format</DataField>
+        </Field>
+        <Field Name="TDS_Entry__TDS_Base_Amount__Control1102159022">
+          <DataField>TDS_Entry__TDS_Base_Amount__Control1102159022</DataField>
+        </Field>
+        <Field Name="TDS_Entry__TDS_Base_Amount__Control1102159022Format">
+          <DataField>TDS_Entry__TDS_Base_Amount__Control1102159022Format</DataField>
+        </Field>
+        <Field Name="TDS_Entry__Document_No__Caption">
+          <DataField>TDS_Entry__Document_No__Caption</DataField>
+        </Field>
+        <Field Name="TDS_Entry__Posting_Date_Caption">
+          <DataField>TDS_Entry__Posting_Date_Caption</DataField>
+        </Field>
+        <Field Name="Vendor_NameCaption">
+          <DataField>Vendor_NameCaption</DataField>
+        </Field>
+        <Field Name="TDS_Entry__Deductee_P_A_N__No__Caption">
+          <DataField>TDS_Entry__Deductee_P_A_N__No__Caption</DataField>
+        </Field>
+        <Field Name="TDS_Entry__TDS_Base_Amount_Caption">
+          <DataField>TDS_Entry__TDS_Base_Amount_Caption</DataField>
+        </Field>
+        <Field Name="TDS_Entry__TDS_Amount_Including_Surcharge_Caption">
+          <DataField>TDS_Entry__TDS_Amount_Including_Surcharge_Caption</DataField>
+        </Field>
+        <Field Name="Sales_RegisterCaption">
+          <DataField>Sales_RegisterCaption</DataField>
+        </Field>
+        <Field Name="CurrReport_PAGENOCaption">
+          <DataField>CurrReport_PAGENOCaption</DataField>
+        </Field>
+        <Field Name="TDS_Entry__Assessee_Code_Caption">
+          <DataField>TDS_Entry__Assessee_Code_Caption</DataField>
+        </Field>
+        <Field Name="TDS_Entry__TDS_Nature_of_Deduction_Caption">
+          <DataField>TDS_Entry__TDS_Nature_of_Deduction_Caption</DataField>
+        </Field>
+        <Field Name="Grand_Total__Caption">
+          <DataField>Grand_Total__Caption</DataField>
+        </Field>
+        <Field Name="End_Of_The_ReportCaption">
+          <DataField>End_Of_The_ReportCaption</DataField>
+        </Field>
+        <Field Name="TDS_Entry_Entry_No_">
+          <DataField>TDS_Entry_Entry_No_</DataField>
+        </Field>
+        <Field Name="Vendor_Name">
+          <DataField>Vendor_Name</DataField>
+        </Field>
+        <Field Name="TDS_TDSEntry">
+          <DataField>TDS_TDSEntry</DataField>
+        </Field>
+        <Field Name="TDS_TDSEntryFormat">
+          <DataField>TDS_TDSEntryFormat</DataField>
+        </Field>
+        <Field Name="DocumentType_TDSEntry">
+          <DataField>DocumentType_TDSEntry</DataField>
+        </Field>
+        <Field Name="PIH_DocumentDate">
+          <DataField>PIH_DocumentDate</DataField>
+        </Field>
+        <Field Name="PIH_VendorInvoiceNo">
+          <DataField>PIH_VendorInvoiceNo</DataField>
+        </Field>
+        <Field Name="VLE_DocumentDate">
+          <DataField>VLE_DocumentDate</DataField>
+        </Field>
+        <Field Name="VLE_ExternalDocumentNo">
+          <DataField>VLE_ExternalDocumentNo</DataField>
+        </Field>
+        <Field Name="Vendor_City">
+          <DataField>Vendor_City</DataField>
+        </Field>
+        <Field Name="TDS_Entry_TDS_Section">
+          <DataField>TDS_Entry_TDS_Section</DataField>
+        </Field>
+        <Field Name="TDS_Entry_TDS_Group">
+          <DataField>TDS_Entry_TDS_Group</DataField>
+        </Field>
+        <Field Name="TDSPER">
+          <DataField>TDSPER</DataField>
+        </Field>
+        <Field Name="TDSPERFormat">
+          <DataField>TDSPERFormat</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
+</Report>

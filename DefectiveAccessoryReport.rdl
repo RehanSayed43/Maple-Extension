@@ -1,0 +1,161 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DataSource">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+      <rd:SecurityType>None</rd:SecurityType>
+    </DataSource>
+  </DataSources>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <Height>2in</Height>
+        <Style />
+      </Body>
+      <Width>6.5in</Width>
+      <Page>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <Code>Public Function BlankZero(ByVal Value As Decimal)
+    if Value = 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankPos(ByVal Value As Decimal)
+    if Value &gt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankZeroAndPos(ByVal Value As Decimal)
+    if Value &gt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNeg(ByVal Value As Decimal)
+    if Value &lt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNegAndZero(ByVal Value As Decimal)
+    if Value &lt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+</Code>
+  <Language>=User!Language</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="TransactionNo_DefectiveAccessory">
+          <DataField>TransactionNo_DefectiveAccessory</DataField>
+        </Field>
+        <Field Name="CreationDate_DefectiveAccessory">
+          <DataField>CreationDate_DefectiveAccessory</DataField>
+        </Field>
+        <Field Name="Zone_DefectiveAccessory">
+          <DataField>Zone_DefectiveAccessory</DataField>
+        </Field>
+        <Field Name="State_DefectiveAccessory">
+          <DataField>State_DefectiveAccessory</DataField>
+        </Field>
+        <Field Name="City_DefectiveAccessory">
+          <DataField>City_DefectiveAccessory</DataField>
+        </Field>
+        <Field Name="LocationCode_DefectiveAccessory">
+          <DataField>LocationCode_DefectiveAccessory</DataField>
+        </Field>
+        <Field Name="CustomerType_DefectiveAccessory">
+          <DataField>CustomerType_DefectiveAccessory</DataField>
+        </Field>
+        <Field Name="CustomerNo_DefectiveAccessory">
+          <DataField>CustomerNo_DefectiveAccessory</DataField>
+        </Field>
+        <Field Name="CustomerName_DefectiveAccessory">
+          <DataField>CustomerName_DefectiveAccessory</DataField>
+        </Field>
+        <Field Name="InvoiceNo_DefectiveAccessory">
+          <DataField>InvoiceNo_DefectiveAccessory</DataField>
+        </Field>
+        <Field Name="PostingDate_DefectiveAccessory">
+          <DataField>PostingDate_DefectiveAccessory</DataField>
+        </Field>
+        <Field Name="Brand_DefectiveAccessory">
+          <DataField>Brand_DefectiveAccessory</DataField>
+        </Field>
+        <Field Name="Category_DefectiveAccessory">
+          <DataField>Category_DefectiveAccessory</DataField>
+        </Field>
+        <Field Name="PrimaryCategory_DefectiveAccessory">
+          <DataField>PrimaryCategory_DefectiveAccessory</DataField>
+        </Field>
+        <Field Name="MaplePartCode_DefectiveAccessory">
+          <DataField>MaplePartCode_DefectiveAccessory</DataField>
+        </Field>
+        <Field Name="VendorpartCode_DefectiveAccessory">
+          <DataField>VendorpartCode_DefectiveAccessory</DataField>
+        </Field>
+        <Field Name="Description_DefectiveAccessory">
+          <DataField>Description_DefectiveAccessory</DataField>
+        </Field>
+        <Field Name="QtyTakenBack_DefectiveAccessory">
+          <DataField>QtyTakenBack_DefectiveAccessory</DataField>
+        </Field>
+        <Field Name="UPNNo_DefectiveAccessory">
+          <DataField>UPNNo_DefectiveAccessory</DataField>
+        </Field>
+        <Field Name="GivenBrand_DefectiveAccessory">
+          <DataField>GivenBrand_DefectiveAccessory</DataField>
+        </Field>
+        <Field Name="GivenCategory_DefectiveAccessory">
+          <DataField>GivenCategory_DefectiveAccessory</DataField>
+        </Field>
+        <Field Name="GivenPrimaryCategory_DefectiveAccessory">
+          <DataField>GivenPrimaryCategory_DefectiveAccessory</DataField>
+        </Field>
+        <Field Name="GivenMaplePartCode_DefectiveAccessory">
+          <DataField>GivenMaplePartCode_DefectiveAccessory</DataField>
+        </Field>
+        <Field Name="GivenVendorpartCode_DefectiveAccessory">
+          <DataField>GivenVendorpartCode_DefectiveAccessory</DataField>
+        </Field>
+        <Field Name="GivenDescription_DefectiveAccessory">
+          <DataField>GivenDescription_DefectiveAccessory</DataField>
+        </Field>
+        <Field Name="QtyGiven_DefectiveAccessory">
+          <DataField>QtyGiven_DefectiveAccessory</DataField>
+        </Field>
+        <Field Name="GivenUPNNo_DefectiveAccessory">
+          <DataField>GivenUPNNo_DefectiveAccessory</DataField>
+        </Field>
+        <Field Name="DamageLocation_DefectiveAccessory">
+          <DataField>DamageLocation_DefectiveAccessory</DataField>
+        </Field>
+        <Field Name="InvoiceDate_DefectiveAccessory">
+          <DataField>InvoiceDate_DefectiveAccessory</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
+</Report>

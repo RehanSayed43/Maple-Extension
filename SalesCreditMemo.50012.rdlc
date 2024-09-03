@@ -1,0 +1,215 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DataSource">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+      <rd:SecurityType>None</rd:SecurityType>
+    </DataSource>
+  </DataSources>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <Height>2in</Height>
+        <Style />
+      </Body>
+      <Width>6.5in</Width>
+      <Page>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <Code>Public Function BlankZero(ByVal Value As Decimal)
+    if Value = 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankPos(ByVal Value As Decimal)
+    if Value &gt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankZeroAndPos(ByVal Value As Decimal)
+    if Value &gt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNeg(ByVal Value As Decimal)
+    if Value &lt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNegAndZero(ByVal Value As Decimal)
+    if Value &lt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+</Code>
+  <Language>=User!Language</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="CompInfoName">
+          <DataField>CompInfoName</DataField>
+        </Field>
+        <Field Name="CompInfoPAN">
+          <DataField>CompInfoPAN</DataField>
+        </Field>
+        <Field Name="CompInfoTIN">
+          <DataField>CompInfoTIN</DataField>
+        </Field>
+        <Field Name="CinNo">
+          <DataField>CinNo</DataField>
+        </Field>
+        <Field Name="LocName">
+          <DataField>LocName</DataField>
+        </Field>
+        <Field Name="LocAdd">
+          <DataField>LocAdd</DataField>
+        </Field>
+        <Field Name="LocAdd2">
+          <DataField>LocAdd2</DataField>
+        </Field>
+        <Field Name="LocCity">
+          <DataField>LocCity</DataField>
+        </Field>
+        <Field Name="LocPhn">
+          <DataField>LocPhn</DataField>
+        </Field>
+        <Field Name="LocFAX">
+          <DataField>LocFAX</DataField>
+        </Field>
+        <Field Name="LocCountry">
+          <DataField>LocCountry</DataField>
+        </Field>
+        <Field Name="AppliestoDocNo_SalesCrMemoHeader">
+          <DataField>AppliestoDocNo_SalesCrMemoHeader</DataField>
+        </Field>
+        <Field Name="No_SalesCrMemoHeader">
+          <DataField>No_SalesCrMemoHeader</DataField>
+        </Field>
+        <Field Name="BilltoCustomerNo_SalesCrMemoHeader">
+          <DataField>BilltoCustomerNo_SalesCrMemoHeader</DataField>
+        </Field>
+        <Field Name="PostingDate_SalesCrMemoHeader">
+          <DataField>PostingDate_SalesCrMemoHeader</DataField>
+        </Field>
+        <Field Name="CustName">
+          <DataField>CustName</DataField>
+        </Field>
+        <Field Name="CustAdd">
+          <DataField>CustAdd</DataField>
+        </Field>
+        <Field Name="CustAdd2">
+          <DataField>CustAdd2</DataField>
+        </Field>
+        <Field Name="CustCiy">
+          <DataField>CustCiy</DataField>
+        </Field>
+        <Field Name="CustPhn">
+          <DataField>CustPhn</DataField>
+        </Field>
+        <Field Name="CustPost">
+          <DataField>CustPost</DataField>
+        </Field>
+        <Field Name="CustLST">
+          <DataField>CustLST</DataField>
+        </Field>
+        <Field Name="CustCST">
+          <DataField>CustCST</DataField>
+        </Field>
+        <Field Name="CustPAN">
+          <DataField>CustPAN</DataField>
+        </Field>
+        <Field Name="CustTINl">
+          <DataField>CustTINl</DataField>
+        </Field>
+        <Field Name="AmounttoWord">
+          <DataField>AmounttoWord</DataField>
+        </Field>
+        <Field Name="AmounttoWord1">
+          <DataField>AmounttoWord1</DataField>
+        </Field>
+        <Field Name="ST_SalesCrMemoLine">
+          <DataField>ST_SalesCrMemoLine</DataField>
+        </Field>
+        <Field Name="ST_SalesCrMemoLineFormat">
+          <DataField>ST_SalesCrMemoLineFormat</DataField>
+        </Field>
+        <Field Name="SNo">
+          <DataField>SNo</DataField>
+        </Field>
+        <Field Name="No">
+          <DataField>No</DataField>
+        </Field>
+        <Field Name="Desc">
+          <DataField>Desc</DataField>
+        </Field>
+        <Field Name="Amt">
+          <DataField>Amt</DataField>
+        </Field>
+        <Field Name="AmtFormat">
+          <DataField>AmtFormat</DataField>
+        </Field>
+        <Field Name="AmttoCust">
+          <DataField>AmttoCust</DataField>
+        </Field>
+        <Field Name="AmttoCustFormat">
+          <DataField>AmttoCustFormat</DataField>
+        </Field>
+        <Field Name="UnitofMeasure_SalesCrMemoLine">
+          <DataField>UnitofMeasure_SalesCrMemoLine</DataField>
+        </Field>
+        <Field Name="UnitofMeasure_SalesCrMemoLineFormat">
+          <DataField>UnitofMeasure_SalesCrMemoLineFormat</DataField>
+        </Field>
+        <Field Name="ServiceTaxGroup_SalesCrMemoLine">
+          <DataField>ServiceTaxGroup_SalesCrMemoLine</DataField>
+        </Field>
+        <Field Name="ServiceTaxAmount_SalesCrMemoLine">
+          <DataField>ServiceTaxAmount_SalesCrMemoLine</DataField>
+        </Field>
+        <Field Name="LineAmount_SalesCrMemoLine">
+          <DataField>LineAmount_SalesCrMemoLine</DataField>
+        </Field>
+        <Field Name="LineAmount_SalesCrMemoLineFormat">
+          <DataField>LineAmount_SalesCrMemoLineFormat</DataField>
+        </Field>
+        <Field Name="LineDiscountAmount_SalesCrMemoLine">
+          <DataField>LineDiscountAmount_SalesCrMemoLine</DataField>
+        </Field>
+        <Field Name="LineDiscountAmount_SalesCrMemoLineFormat">
+          <DataField>LineDiscountAmount_SalesCrMemoLineFormat</DataField>
+        </Field>
+        <Field Name="Comment_SalesCommentLine">
+          <DataField>Comment_SalesCommentLine</DataField>
+        </Field>
+        <Field Name="roundamt1">
+          <DataField>roundamt1</DataField>
+        </Field>
+        <Field Name="roundamt1Format">
+          <DataField>roundamt1Format</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
+</Report>

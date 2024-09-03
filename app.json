@@ -1,0 +1,77 @@
+{
+  "id": "8e702388-c5bf-4d94-962c-658d402a131d",
+  "name": "Maple",
+  "publisher": "CCIT",
+  "version": "1.0.0.209",
+  "brief": "",
+  "description": "",
+  "privacyStatement": "",
+  "EULA": "",
+  "help": "",
+  "url": "",
+  "logo": "",
+  "dependencies": [
+    {
+      "id": "db643212-b7fb-4dd4-b5a8-cb44ac714461",
+      "name": "India GST",
+      "version": "23.5.16502.19465",
+      "publisher": "Microsoft"
+    },
+   
+    {
+      "id": "050f6146-bffd-40de-942c-d0dd510ec20f",
+      "name": "India Reports",
+      "version": "23.5.16502.16887",
+      "publisher": "Microsoft"
+    },
+    {
+      "id": "d3c551dd-5903-4194-b153-04ced9d29a2c",
+      "name": "India Tax Base",
+      "publisher": "Microsoft",
+      "version": "23.5.16502.18664"
+    },
+    {
+      "id": "c1eafb3f-e397-468e-bdb4-ecc5c317ca00",
+      "name": "Tax Engine",
+      "publisher": "Microsoft",
+      "version": "23.5.16502.17445"
+    },
+    {
+      "id": "7106d701-c601-4a5f-97c2-b8b323ae2c18",
+      "publisher": "Microsoft",
+      "name": "QR Generator",
+      "version": "23.5.16502.16887"
+    },
+    {
+      "id": "68e13fa3-217a-4be0-9141-99e5bf0ca818",
+      "name": "Email - SMTP Connector",
+      "publisher": "Microsoft",
+      "version": "23.5.16502.16887"
+    },
+    {
+      "id": "eae5779e-7797-4c4c-977e-7516652b7a65",
+      "name": "India TDS",
+      "publisher": "Microsoft",
+      "version": "23.5.16502.18664"
+    }
+
+  ],
+  "screenshots": [],
+  "platform": "1.0.0.0",
+  "application": "23.0.0.0",
+  "idRanges": [
+    {
+      "from": 50000,
+      "to": 59999
+    }
+  ],
+  "resourceExposurePolicy": {
+    "allowDebugging": true,
+    "allowDownloadingSource": true,
+    "includeSourceInSymbolFile": true
+  },
+  "runtime": "12.0",
+  "features": [
+    "NoImplicitWith"
+  ]
+}

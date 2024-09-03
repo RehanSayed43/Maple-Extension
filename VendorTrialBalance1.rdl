@@ -1,0 +1,248 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DataSource">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+      <rd:SecurityType>None</rd:SecurityType>
+    </DataSource>
+  </DataSources>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <Height>2in</Height>
+        <Style />
+      </Body>
+      <Width>6.5in</Width>
+      <Page>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <Code>Public Function BlankZero(ByVal Value As Decimal)
+    if Value = 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankPos(ByVal Value As Decimal)
+    if Value &gt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankZeroAndPos(ByVal Value As Decimal)
+    if Value &gt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNeg(ByVal Value As Decimal)
+    if Value &lt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNegAndZero(ByVal Value As Decimal)
+    if Value &lt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+</Code>
+  <Language>=User!Language</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="CompanyInfo_Name">
+          <DataField>CompanyInfo_Name</DataField>
+        </Field>
+        <Field Name="FORMAT_TODAY_0_4_">
+          <DataField>FORMAT_TODAY_0_4_</DataField>
+        </Field>
+        <Field Name="COMPANYNAME">
+          <DataField>COMPANYNAME</DataField>
+        </Field>
+        <Field Name="CurrReport_PAGENO">
+          <DataField>CurrReport_PAGENO</DataField>
+        </Field>
+        <Field Name="USERID">
+          <DataField>USERID</DataField>
+        </Field>
+        <Field Name="RepFilter">
+          <DataField>RepFilter</DataField>
+        </Field>
+        <Field Name="Vendor__No__">
+          <DataField>Vendor__No__</DataField>
+        </Field>
+        <Field Name="Vendor_Name">
+          <DataField>Vendor_Name</DataField>
+        </Field>
+        <Field Name="City_Vendor">
+          <DataField>City_Vendor</DataField>
+        </Field>
+        <Field Name="VarTranDr">
+          <DataField>VarTranDr</DataField>
+        </Field>
+        <Field Name="VarTranDrFormat">
+          <DataField>VarTranDrFormat</DataField>
+        </Field>
+        <Field Name="VarTranCr">
+          <DataField>VarTranCr</DataField>
+        </Field>
+        <Field Name="VarTranCrFormat">
+          <DataField>VarTranCrFormat</DataField>
+        </Field>
+        <Field Name="VarCloseDr">
+          <DataField>VarCloseDr</DataField>
+        </Field>
+        <Field Name="VarCloseDrFormat">
+          <DataField>VarCloseDrFormat</DataField>
+        </Field>
+        <Field Name="VarCloseCr">
+          <DataField>VarCloseCr</DataField>
+        </Field>
+        <Field Name="VarCloseCrFormat">
+          <DataField>VarCloseCrFormat</DataField>
+        </Field>
+        <Field Name="VarOpenCr">
+          <DataField>VarOpenCr</DataField>
+        </Field>
+        <Field Name="VarOpenCrFormat">
+          <DataField>VarOpenCrFormat</DataField>
+        </Field>
+        <Field Name="VarOpenDr">
+          <DataField>VarOpenDr</DataField>
+        </Field>
+        <Field Name="VarOpenDrFormat">
+          <DataField>VarOpenDrFormat</DataField>
+        </Field>
+        <Field Name="TotVarOpenDr">
+          <DataField>TotVarOpenDr</DataField>
+        </Field>
+        <Field Name="TotVarOpenDrFormat">
+          <DataField>TotVarOpenDrFormat</DataField>
+        </Field>
+        <Field Name="TotVarOpenCr">
+          <DataField>TotVarOpenCr</DataField>
+        </Field>
+        <Field Name="TotVarOpenCrFormat">
+          <DataField>TotVarOpenCrFormat</DataField>
+        </Field>
+        <Field Name="TotVarTranDr">
+          <DataField>TotVarTranDr</DataField>
+        </Field>
+        <Field Name="TotVarTranDrFormat">
+          <DataField>TotVarTranDrFormat</DataField>
+        </Field>
+        <Field Name="TotVarTranCr">
+          <DataField>TotVarTranCr</DataField>
+        </Field>
+        <Field Name="TotVarTranCrFormat">
+          <DataField>TotVarTranCrFormat</DataField>
+        </Field>
+        <Field Name="TotVarCloseDr">
+          <DataField>TotVarCloseDr</DataField>
+        </Field>
+        <Field Name="TotVarCloseDrFormat">
+          <DataField>TotVarCloseDrFormat</DataField>
+        </Field>
+        <Field Name="TotVarCloseCr">
+          <DataField>TotVarCloseCr</DataField>
+        </Field>
+        <Field Name="TotVarCloseCrFormat">
+          <DataField>TotVarCloseCrFormat</DataField>
+        </Field>
+        <Field Name="Trial_BalanceCaption">
+          <DataField>Trial_BalanceCaption</DataField>
+        </Field>
+        <Field Name="CurrReport_PAGENOCaption">
+          <DataField>CurrReport_PAGENOCaption</DataField>
+        </Field>
+        <Field Name="Vendor__No__Caption">
+          <DataField>Vendor__No__Caption</DataField>
+        </Field>
+        <Field Name="NameCaption">
+          <DataField>NameCaption</DataField>
+        </Field>
+        <Field Name="TransactionCaption">
+          <DataField>TransactionCaption</DataField>
+        </Field>
+        <Field Name="DrCaption">
+          <DataField>DrCaption</DataField>
+        </Field>
+        <Field Name="CrCaption">
+          <DataField>CrCaption</DataField>
+        </Field>
+        <Field Name="OpeningCaption">
+          <DataField>OpeningCaption</DataField>
+        </Field>
+        <Field Name="DrCaption_Control1102159024">
+          <DataField>DrCaption_Control1102159024</DataField>
+        </Field>
+        <Field Name="CrCaption_Control1102159025">
+          <DataField>CrCaption_Control1102159025</DataField>
+        </Field>
+        <Field Name="CrCaption_Control1102159026">
+          <DataField>CrCaption_Control1102159026</DataField>
+        </Field>
+        <Field Name="ClosingCaption">
+          <DataField>ClosingCaption</DataField>
+        </Field>
+        <Field Name="DrCaption_Control1102159027">
+          <DataField>DrCaption_Control1102159027</DataField>
+        </Field>
+        <Field Name="End_of_ReportCaption">
+          <DataField>End_of_ReportCaption</DataField>
+        </Field>
+        <Field Name="OpeningTotalAmount">
+          <DataField>OpeningTotalAmount</DataField>
+        </Field>
+        <Field Name="OpeningTotalAmountFormat">
+          <DataField>OpeningTotalAmountFormat</DataField>
+        </Field>
+        <Field Name="ClosingTotalAmount">
+          <DataField>ClosingTotalAmount</DataField>
+        </Field>
+        <Field Name="ClosingTotalAmountFormat">
+          <DataField>ClosingTotalAmountFormat</DataField>
+        </Field>
+        <Field Name="ClosingAmount">
+          <DataField>ClosingAmount</DataField>
+        </Field>
+        <Field Name="ClosingAmountFormat">
+          <DataField>ClosingAmountFormat</DataField>
+        </Field>
+        <Field Name="OpeningAmount">
+          <DataField>OpeningAmount</DataField>
+        </Field>
+        <Field Name="OpeningAmountFormat">
+          <DataField>OpeningAmountFormat</DataField>
+        </Field>
+        <Field Name="Vendor_Location_Code">
+          <DataField>Vendor_Location_Code</DataField>
+        </Field>
+        <Field Name="Vendor_Responsibility_Center">
+          <DataField>Vendor_Responsibility_Center</DataField>
+        </Field>
+        <Field Name="GlobalDimension1Code_Vendor">
+          <DataField>GlobalDimension1Code_Vendor</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
+</Report>

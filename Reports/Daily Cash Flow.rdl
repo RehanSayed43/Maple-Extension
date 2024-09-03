@@ -1,0 +1,772 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DataSource">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+      <rd:SecurityType>None</rd:SecurityType>
+    </DataSource>
+  </DataSources>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <Height>2in</Height>
+        <Style />
+      </Body>
+      <Width>6.5in</Width>
+      <Page>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <ReportParameters>
+    <ReportParameter Name="compinfoNameCaption">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>compinfoNameCaption</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>compinfoNameCaption</Prompt>
+    </ReportParameter>
+  </ReportParameters>
+  <Code>Public Function BlankZero(ByVal Value As Decimal)
+    if Value = 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankPos(ByVal Value As Decimal)
+    if Value &gt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankZeroAndPos(ByVal Value As Decimal)
+    if Value &gt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNeg(ByVal Value As Decimal)
+    if Value &lt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNegAndZero(ByVal Value As Decimal)
+    if Value &lt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+</Code>
+  <Language>=User!Language</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="docno">
+          <DataField>docno</DataField>
+        </Field>
+        <Field Name="InvCr">
+          <DataField>InvCr</DataField>
+        </Field>
+        <Field Name="compinfoName">
+          <DataField>compinfoName</DataField>
+        </Field>
+        <Field Name="compinfoPicture">
+          <DataField>compinfoPicture</DataField>
+        </Field>
+        <Field Name="No">
+          <DataField>No</DataField>
+        </Field>
+        <Field Name="datefilter">
+          <DataField>datefilter</DataField>
+        </Field>
+        <Field Name="startdt">
+          <DataField>startdt</DataField>
+        </Field>
+        <Field Name="enddt">
+          <DataField>enddt</DataField>
+        </Field>
+        <Field Name="Location">
+          <DataField>Location</DataField>
+        </Field>
+        <Field Name="PostingDate_SalesInvoiceHeader">
+          <DataField>PostingDate_SalesInvoiceHeader</DataField>
+        </Field>
+        <Field Name="ExternalDocumentNo_SalesInvoiceHeader">
+          <DataField>ExternalDocumentNo_SalesInvoiceHeader</DataField>
+        </Field>
+        <Field Name="FORMAT_TODAY_0_4_">
+          <DataField>FORMAT_TODAY_0_4_</DataField>
+        </Field>
+        <Field Name="comp_Name">
+          <DataField>comp_Name</DataField>
+        </Field>
+        <Field Name="CurrReport_PAGENO">
+          <DataField>CurrReport_PAGENO</DataField>
+        </Field>
+        <Field Name="CashBackAmt">
+          <DataField>CashBackAmt</DataField>
+        </Field>
+        <Field Name="CashBackAmtFormat">
+          <DataField>CashBackAmtFormat</DataField>
+        </Field>
+        <Field Name="CashBackCard">
+          <DataField>CashBackCard</DataField>
+        </Field>
+        <Field Name="Srno">
+          <DataField>Srno</DataField>
+        </Field>
+        <Field Name="S_DocNo">
+          <DataField>S_DocNo</DataField>
+        </Field>
+        <Field Name="selltocust">
+          <DataField>selltocust</DataField>
+        </Field>
+        <Field Name="amt_to_cust">
+          <DataField>amt_to_cust</DataField>
+        </Field>
+        <Field Name="amt_to_custFormat">
+          <DataField>amt_to_custFormat</DataField>
+        </Field>
+        <Field Name="Cash">
+          <DataField>Cash</DataField>
+        </Field>
+        <Field Name="CashFormat">
+          <DataField>CashFormat</DataField>
+        </Field>
+        <Field Name="Chq_Amt">
+          <DataField>Chq_Amt</DataField>
+        </Field>
+        <Field Name="Chq_AmtFormat">
+          <DataField>Chq_AmtFormat</DataField>
+        </Field>
+        <Field Name="cardno_1">
+          <DataField>cardno_1</DataField>
+        </Field>
+        <Field Name="cardno_2">
+          <DataField>cardno_2</DataField>
+        </Field>
+        <Field Name="cardno_3">
+          <DataField>cardno_3</DataField>
+        </Field>
+        <Field Name="cardno_4s">
+          <DataField>cardno_4s</DataField>
+        </Field>
+        <Field Name="cardno_5">
+          <DataField>cardno_5</DataField>
+        </Field>
+        <Field Name="Cr_Amt1">
+          <DataField>Cr_Amt1</DataField>
+        </Field>
+        <Field Name="Cr_Amt1Format">
+          <DataField>Cr_Amt1Format</DataField>
+        </Field>
+        <Field Name="Cr_Amt2">
+          <DataField>Cr_Amt2</DataField>
+        </Field>
+        <Field Name="Cr_Amt2Format">
+          <DataField>Cr_Amt2Format</DataField>
+        </Field>
+        <Field Name="Cr_Amt3">
+          <DataField>Cr_Amt3</DataField>
+        </Field>
+        <Field Name="Cr_Amt3Format">
+          <DataField>Cr_Amt3Format</DataField>
+        </Field>
+        <Field Name="Cr_Amt4">
+          <DataField>Cr_Amt4</DataField>
+        </Field>
+        <Field Name="Cr_Amt4Format">
+          <DataField>Cr_Amt4Format</DataField>
+        </Field>
+        <Field Name="Cr_Amt5">
+          <DataField>Cr_Amt5</DataField>
+        </Field>
+        <Field Name="Cr_Amt5Format">
+          <DataField>Cr_Amt5Format</DataField>
+        </Field>
+        <Field Name="RTGS_Amt">
+          <DataField>RTGS_Amt</DataField>
+        </Field>
+        <Field Name="RTGS_AmtFormat">
+          <DataField>RTGS_AmtFormat</DataField>
+        </Field>
+        <Field Name="RefNo">
+          <DataField>RefNo</DataField>
+        </Field>
+        <Field Name="AppQty">
+          <DataField>AppQty</DataField>
+        </Field>
+        <Field Name="NonAppQty">
+          <DataField>NonAppQty</DataField>
+        </Field>
+        <Field Name="HDFCCardNo">
+          <DataField>HDFCCardNo</DataField>
+        </Field>
+        <Field Name="HSBCCardNo">
+          <DataField>HSBCCardNo</DataField>
+        </Field>
+        <Field Name="AMXCardNo">
+          <DataField>AMXCardNo</DataField>
+        </Field>
+        <Field Name="CITICardNo">
+          <DataField>CITICardNo</DataField>
+        </Field>
+        <Field Name="InnovitiCardNo">
+          <DataField>InnovitiCardNo</DataField>
+        </Field>
+        <Field Name="PineLABSCardNo">
+          <DataField>PineLABSCardNo</DataField>
+        </Field>
+        <Field Name="SaleCashAmt">
+          <DataField>SaleCashAmt</DataField>
+        </Field>
+        <Field Name="SaleCashAmtFormat">
+          <DataField>SaleCashAmtFormat</DataField>
+        </Field>
+        <Field Name="SaleChqAmt">
+          <DataField>SaleChqAmt</DataField>
+        </Field>
+        <Field Name="SaleChqAmtFormat">
+          <DataField>SaleChqAmtFormat</DataField>
+        </Field>
+        <Field Name="HDFCAMT">
+          <DataField>HDFCAMT</DataField>
+        </Field>
+        <Field Name="HDFCAMTFormat">
+          <DataField>HDFCAMTFormat</DataField>
+        </Field>
+        <Field Name="HSBCAMT">
+          <DataField>HSBCAMT</DataField>
+        </Field>
+        <Field Name="HSBCAMTFormat">
+          <DataField>HSBCAMTFormat</DataField>
+        </Field>
+        <Field Name="AMXAMT">
+          <DataField>AMXAMT</DataField>
+        </Field>
+        <Field Name="AMXAMTFormat">
+          <DataField>AMXAMTFormat</DataField>
+        </Field>
+        <Field Name="CITIAMT">
+          <DataField>CITIAMT</DataField>
+        </Field>
+        <Field Name="CITIAMTFormat">
+          <DataField>CITIAMTFormat</DataField>
+        </Field>
+        <Field Name="InnovitiAMT">
+          <DataField>InnovitiAMT</DataField>
+        </Field>
+        <Field Name="InnovitiAMTFormat">
+          <DataField>InnovitiAMTFormat</DataField>
+        </Field>
+        <Field Name="PineLABSAMT">
+          <DataField>PineLABSAMT</DataField>
+        </Field>
+        <Field Name="PineLABSAMTFormat">
+          <DataField>PineLABSAMTFormat</DataField>
+        </Field>
+        <Field Name="GiftVouchAmt">
+          <DataField>GiftVouchAmt</DataField>
+        </Field>
+        <Field Name="GiftVouchAmtFormat">
+          <DataField>GiftVouchAmtFormat</DataField>
+        </Field>
+        <Field Name="FinAmt">
+          <DataField>FinAmt</DataField>
+        </Field>
+        <Field Name="FinAmtFormat">
+          <DataField>FinAmtFormat</DataField>
+        </Field>
+        <Field Name="FinAmt1">
+          <DataField>FinAmt1</DataField>
+        </Field>
+        <Field Name="FinAmt1Format">
+          <DataField>FinAmt1Format</DataField>
+        </Field>
+        <Field Name="FinAmt2">
+          <DataField>FinAmt2</DataField>
+        </Field>
+        <Field Name="FinAmt2Format">
+          <DataField>FinAmt2Format</DataField>
+        </Field>
+        <Field Name="FinAmt3">
+          <DataField>FinAmt3</DataField>
+        </Field>
+        <Field Name="FinAmt3Format">
+          <DataField>FinAmt3Format</DataField>
+        </Field>
+        <Field Name="FinAmt4">
+          <DataField>FinAmt4</DataField>
+        </Field>
+        <Field Name="FinAmt4Format">
+          <DataField>FinAmt4Format</DataField>
+        </Field>
+        <Field Name="PinelabApprovalCode_SalesInvoiceHeader">
+          <DataField>PinelabApprovalCode_SalesInvoiceHeader</DataField>
+        </Field>
+        <Field Name="PaytmApprovalCode_SalesInvoiceHeader">
+          <DataField>PaytmApprovalCode_SalesInvoiceHeader</DataField>
+        </Field>
+        <Field Name="PaytmTransferAmount_SalesInvoiceHeader">
+          <DataField>PaytmTransferAmount_SalesInvoiceHeader</DataField>
+        </Field>
+        <Field Name="PaytmTransferAmount_SalesInvoiceHeaderFormat">
+          <DataField>PaytmTransferAmount_SalesInvoiceHeaderFormat</DataField>
+        </Field>
+        <Field Name="paytm_amount2">
+          <DataField>paytm_amount2</DataField>
+        </Field>
+        <Field Name="paytm_amount2Format">
+          <DataField>paytm_amount2Format</DataField>
+        </Field>
+        <Field Name="CashifyApprovalCode_SalesInvoiceHeader">
+          <DataField>CashifyApprovalCode_SalesInvoiceHeader</DataField>
+        </Field>
+        <Field Name="Cashify_amount">
+          <DataField>Cashify_amount</DataField>
+        </Field>
+        <Field Name="Cashify_amountFormat">
+          <DataField>Cashify_amountFormat</DataField>
+        </Field>
+        <Field Name="InsuranceApprovalCode_SalesInvoiceHeader">
+          <DataField>InsuranceApprovalCode_SalesInvoiceHeader</DataField>
+        </Field>
+        <Field Name="insurance_Amount">
+          <DataField>insurance_Amount</DataField>
+        </Field>
+        <Field Name="insurance_AmountFormat">
+          <DataField>insurance_AmountFormat</DataField>
+        </Field>
+        <Field Name="PayByPointsamount">
+          <DataField>PayByPointsamount</DataField>
+        </Field>
+        <Field Name="PayByPointsamountFormat">
+          <DataField>PayByPointsamountFormat</DataField>
+        </Field>
+        <Field Name="EdenredAmount">
+          <DataField>EdenredAmount</DataField>
+        </Field>
+        <Field Name="EdenredAmountFormat">
+          <DataField>EdenredAmountFormat</DataField>
+        </Field>
+        <Field Name="NBFCAmount">
+          <DataField>NBFCAmount</DataField>
+        </Field>
+        <Field Name="NBFCAmountFormat">
+          <DataField>NBFCAmountFormat</DataField>
+        </Field>
+        <Field Name="Pinelab_Amount">
+          <DataField>Pinelab_Amount</DataField>
+        </Field>
+        <Field Name="Pinelab_AmountFormat">
+          <DataField>Pinelab_AmountFormat</DataField>
+        </Field>
+        <Field Name="Servify_Amount">
+          <DataField>Servify_Amount</DataField>
+        </Field>
+        <Field Name="Servify_AmountFormat">
+          <DataField>Servify_AmountFormat</DataField>
+        </Field>
+        <Field Name="ServifyBonusAmount">
+          <DataField>ServifyBonusAmount</DataField>
+        </Field>
+        <Field Name="ServifyBonusAmountFormat">
+          <DataField>ServifyBonusAmountFormat</DataField>
+        </Field>
+        <Field Name="CashifyBonusAmount">
+          <DataField>CashifyBonusAmount</DataField>
+        </Field>
+        <Field Name="CashifyBonusAmountFormat">
+          <DataField>CashifyBonusAmountFormat</DataField>
+        </Field>
+        <Field Name="Servify_App_Code">
+          <DataField>Servify_App_Code</DataField>
+        </Field>
+        <Field Name="Paytm_App_code">
+          <DataField>Paytm_App_code</DataField>
+        </Field>
+        <Field Name="ExApprovalCode_SalesInvoiceHeader">
+          <DataField>ExApprovalCode_SalesInvoiceHeader</DataField>
+        </Field>
+        <Field Name="ExTransferAmount_SalesInvoiceHeader">
+          <DataField>ExTransferAmount_SalesInvoiceHeader</DataField>
+        </Field>
+        <Field Name="ExTransferAmount_SalesInvoiceHeaderFormat">
+          <DataField>ExTransferAmount_SalesInvoiceHeaderFormat</DataField>
+        </Field>
+        <Field Name="MapBBAmt">
+          <DataField>MapBBAmt</DataField>
+        </Field>
+        <Field Name="MapBBAmtFormat">
+          <DataField>MapBBAmtFormat</DataField>
+        </Field>
+        <Field Name="AppBBAmt">
+          <DataField>AppBBAmt</DataField>
+        </Field>
+        <Field Name="AppBBAmtFormat">
+          <DataField>AppBBAmtFormat</DataField>
+        </Field>
+        <Field Name="BBAmt">
+          <DataField>BBAmt</DataField>
+        </Field>
+        <Field Name="BBAmtFormat">
+          <DataField>BBAmtFormat</DataField>
+        </Field>
+        <Field Name="BBAMtTot">
+          <DataField>BBAMtTot</DataField>
+        </Field>
+        <Field Name="BBAMtTotFormat">
+          <DataField>BBAMtTotFormat</DataField>
+        </Field>
+        <Field Name="Comment">
+          <DataField>Comment</DataField>
+        </Field>
+        <Field Name="RTGSRefNo_SalesInvoiceHeader">
+          <DataField>RTGSRefNo_SalesInvoiceHeader</DataField>
+        </Field>
+        <Field Name="FinanceComapny_SalesInvoiceHeader">
+          <DataField>FinanceComapny_SalesInvoiceHeader</DataField>
+        </Field>
+        <Field Name="FinanceCompanyName">
+          <DataField>FinanceCompanyName</DataField>
+        </Field>
+        <Field Name="FinanceCompanyName1">
+          <DataField>FinanceCompanyName1</DataField>
+        </Field>
+        <Field Name="RtgNo">
+          <DataField>RtgNo</DataField>
+        </Field>
+        <Field Name="BANKAppCode">
+          <DataField>BANKAppCode</DataField>
+        </Field>
+        <Field Name="BANKAppCode1">
+          <DataField>BANKAppCode1</DataField>
+        </Field>
+        <Field Name="BANKAppCode2">
+          <DataField>BANKAppCode2</DataField>
+        </Field>
+        <Field Name="BANKAppCode4">
+          <DataField>BANKAppCode4</DataField>
+        </Field>
+        <Field Name="ChequeNo_CustLedgerEntry">
+          <DataField>ChequeNo_CustLedgerEntry</DataField>
+        </Field>
+        <Field Name="chquamt">
+          <DataField>chquamt</DataField>
+        </Field>
+        <Field Name="chquamtFormat">
+          <DataField>chquamtFormat</DataField>
+        </Field>
+        <Field Name="LoyaltyRWCardNo">
+          <DataField>LoyaltyRWCardNo</DataField>
+        </Field>
+        <Field Name="LoyaltyRWAMT">
+          <DataField>LoyaltyRWAMT</DataField>
+        </Field>
+        <Field Name="LoyaltyRewardz_amount">
+          <DataField>LoyaltyRewardz_amount</DataField>
+        </Field>
+        <Field Name="LoyaltyRewardz_amountFormat">
+          <DataField>LoyaltyRewardz_amountFormat</DataField>
+        </Field>
+        <Field Name="LoyaltyRiwardzTrAmount_SalesInvoiceHeader">
+          <DataField>LoyaltyRiwardzTrAmount_SalesInvoiceHeader</DataField>
+        </Field>
+        <Field Name="LoyaltyRiwardzTrAmount_SalesInvoiceHeaderFormat">
+          <DataField>LoyaltyRiwardzTrAmount_SalesInvoiceHeaderFormat</DataField>
+        </Field>
+        <Field Name="LoyaltyRiwardzMethodCode_SalesInvoiceHeader">
+          <DataField>LoyaltyRiwardzMethodCode_SalesInvoiceHeader</DataField>
+        </Field>
+        <Field Name="LoyaltyRiwardzApprovalCode_SalesInvoiceHeader">
+          <DataField>LoyaltyRiwardzApprovalCode_SalesInvoiceHeader</DataField>
+        </Field>
+        <Field Name="SP_Code">
+          <DataField>SP_Code</DataField>
+        </Field>
+        <Field Name="SP_Name">
+          <DataField>SP_Name</DataField>
+        </Field>
+        <Field Name="PostingDate_SalesCrMemoHeader">
+          <DataField>PostingDate_SalesCrMemoHeader</DataField>
+        </Field>
+        <Field Name="ExternalDocumentNo_SalesCrMemoHeader">
+          <DataField>ExternalDocumentNo_SalesCrMemoHeader</DataField>
+        </Field>
+        <Field Name="SCR_DocNo">
+          <DataField>SCR_DocNo</DataField>
+        </Field>
+        <Field Name="Srno1">
+          <DataField>Srno1</DataField>
+        </Field>
+        <Field Name="custnm">
+          <DataField>custnm</DataField>
+        </Field>
+        <Field Name="amt_2_cust">
+          <DataField>amt_2_cust</DataField>
+        </Field>
+        <Field Name="amt_2_custFormat">
+          <DataField>amt_2_custFormat</DataField>
+        </Field>
+        <Field Name="Cash1">
+          <DataField>Cash1</DataField>
+        </Field>
+        <Field Name="Cash1Format">
+          <DataField>Cash1Format</DataField>
+        </Field>
+        <Field Name="chqamt">
+          <DataField>chqamt</DataField>
+        </Field>
+        <Field Name="chqamtFormat">
+          <DataField>chqamtFormat</DataField>
+        </Field>
+        <Field Name="RTGSAmt">
+          <DataField>RTGSAmt</DataField>
+        </Field>
+        <Field Name="RTGSAmtFormat">
+          <DataField>RTGSAmtFormat</DataField>
+        </Field>
+        <Field Name="cr_no1">
+          <DataField>cr_no1</DataField>
+        </Field>
+        <Field Name="cr_no2">
+          <DataField>cr_no2</DataField>
+        </Field>
+        <Field Name="cr_no3">
+          <DataField>cr_no3</DataField>
+        </Field>
+        <Field Name="cr_no4">
+          <DataField>cr_no4</DataField>
+        </Field>
+        <Field Name="crmt1">
+          <DataField>crmt1</DataField>
+        </Field>
+        <Field Name="crmt1Format">
+          <DataField>crmt1Format</DataField>
+        </Field>
+        <Field Name="crmt2">
+          <DataField>crmt2</DataField>
+        </Field>
+        <Field Name="crmt2Format">
+          <DataField>crmt2Format</DataField>
+        </Field>
+        <Field Name="crmt3">
+          <DataField>crmt3</DataField>
+        </Field>
+        <Field Name="crmt3Format">
+          <DataField>crmt3Format</DataField>
+        </Field>
+        <Field Name="crmt4">
+          <DataField>crmt4</DataField>
+        </Field>
+        <Field Name="crmt4Format">
+          <DataField>crmt4Format</DataField>
+        </Field>
+        <Field Name="GiftVouchCrAmt">
+          <DataField>GiftVouchCrAmt</DataField>
+        </Field>
+        <Field Name="GiftVouchCrAmtFormat">
+          <DataField>GiftVouchCrAmtFormat</DataField>
+        </Field>
+        <Field Name="FinanceCrAmt">
+          <DataField>FinanceCrAmt</DataField>
+        </Field>
+        <Field Name="FinanceCrAmtFormat">
+          <DataField>FinanceCrAmtFormat</DataField>
+        </Field>
+        <Field Name="AppQty1">
+          <DataField>AppQty1</DataField>
+        </Field>
+        <Field Name="NonAppQty1">
+          <DataField>NonAppQty1</DataField>
+        </Field>
+        <Field Name="HDFCCardNo1">
+          <DataField>HDFCCardNo1</DataField>
+        </Field>
+        <Field Name="HSBCCardNo1">
+          <DataField>HSBCCardNo1</DataField>
+        </Field>
+        <Field Name="AMXCardNo1">
+          <DataField>AMXCardNo1</DataField>
+        </Field>
+        <Field Name="CITICardNo1">
+          <DataField>CITICardNo1</DataField>
+        </Field>
+        <Field Name="InnovitiCardNo1">
+          <DataField>InnovitiCardNo1</DataField>
+        </Field>
+        <Field Name="PineLABSCardNo1">
+          <DataField>PineLABSCardNo1</DataField>
+        </Field>
+        <Field Name="HDFCAMT1">
+          <DataField>HDFCAMT1</DataField>
+        </Field>
+        <Field Name="HDFCAMT1Format">
+          <DataField>HDFCAMT1Format</DataField>
+        </Field>
+        <Field Name="HSBCAMT1">
+          <DataField>HSBCAMT1</DataField>
+        </Field>
+        <Field Name="HSBCAMT1Format">
+          <DataField>HSBCAMT1Format</DataField>
+        </Field>
+        <Field Name="AMXAMT1">
+          <DataField>AMXAMT1</DataField>
+        </Field>
+        <Field Name="AMXAMT1Format">
+          <DataField>AMXAMT1Format</DataField>
+        </Field>
+        <Field Name="CITIAMT1">
+          <DataField>CITIAMT1</DataField>
+        </Field>
+        <Field Name="CITIAMT1Format">
+          <DataField>CITIAMT1Format</DataField>
+        </Field>
+        <Field Name="InnovitiAMT1">
+          <DataField>InnovitiAMT1</DataField>
+        </Field>
+        <Field Name="InnovitiAMT1Format">
+          <DataField>InnovitiAMT1Format</DataField>
+        </Field>
+        <Field Name="PineLABSAMT1">
+          <DataField>PineLABSAMT1</DataField>
+        </Field>
+        <Field Name="PineLABSAMT1Format">
+          <DataField>PineLABSAMT1Format</DataField>
+        </Field>
+        <Field Name="RazorPayAmt">
+          <DataField>RazorPayAmt</DataField>
+        </Field>
+        <Field Name="RazorPayAmtFormat">
+          <DataField>RazorPayAmtFormat</DataField>
+        </Field>
+        <Field Name="AppBBCrAmt">
+          <DataField>AppBBCrAmt</DataField>
+        </Field>
+        <Field Name="AppBBCrAmtFormat">
+          <DataField>AppBBCrAmtFormat</DataField>
+        </Field>
+        <Field Name="MapBBCrAmt">
+          <DataField>MapBBCrAmt</DataField>
+        </Field>
+        <Field Name="MapBBCrAmtFormat">
+          <DataField>MapBBCrAmtFormat</DataField>
+        </Field>
+        <Field Name="BBCrAmt">
+          <DataField>BBCrAmt</DataField>
+        </Field>
+        <Field Name="BBCrAmtFormat">
+          <DataField>BBCrAmtFormat</DataField>
+        </Field>
+        <Field Name="BBCrAMtTot">
+          <DataField>BBCrAMtTot</DataField>
+        </Field>
+        <Field Name="BBCrAMtTotFormat">
+          <DataField>BBCrAMtTotFormat</DataField>
+        </Field>
+        <Field Name="CommentCr">
+          <DataField>CommentCr</DataField>
+        </Field>
+        <Field Name="Cr_SalesName">
+          <DataField>Cr_SalesName</DataField>
+        </Field>
+        <Field Name="LoyalityRWCardNo1">
+          <DataField>LoyalityRWCardNo1</DataField>
+        </Field>
+        <Field Name="LoyaltyRWAMT1">
+          <DataField>LoyaltyRWAMT1</DataField>
+        </Field>
+        <Field Name="LoyaltyRWAMT1Format">
+          <DataField>LoyaltyRWAMT1Format</DataField>
+        </Field>
+        <Field Name="CustDocNo">
+          <DataField>CustDocNo</DataField>
+        </Field>
+        <Field Name="cust_cramt">
+          <DataField>cust_cramt</DataField>
+        </Field>
+        <Field Name="cust_cramtFormat">
+          <DataField>cust_cramtFormat</DataField>
+        </Field>
+        <Field Name="cust_custnm">
+          <DataField>cust_custnm</DataField>
+        </Field>
+        <Field Name="cust_amt">
+          <DataField>cust_amt</DataField>
+        </Field>
+        <Field Name="cust_amtFormat">
+          <DataField>cust_amtFormat</DataField>
+        </Field>
+        <Field Name="cashamt">
+          <DataField>cashamt</DataField>
+        </Field>
+        <Field Name="cashamtFormat">
+          <DataField>cashamtFormat</DataField>
+        </Field>
+        <Field Name="Srno2">
+          <DataField>Srno2</DataField>
+        </Field>
+        <Field Name="HDFCAMT2">
+          <DataField>HDFCAMT2</DataField>
+        </Field>
+        <Field Name="HDFCAMT2Format">
+          <DataField>HDFCAMT2Format</DataField>
+        </Field>
+        <Field Name="HSBCAMT2">
+          <DataField>HSBCAMT2</DataField>
+        </Field>
+        <Field Name="HSBCAMT2Format">
+          <DataField>HSBCAMT2Format</DataField>
+        </Field>
+        <Field Name="AMXAMT2">
+          <DataField>AMXAMT2</DataField>
+        </Field>
+        <Field Name="AMXAMT2Format">
+          <DataField>AMXAMT2Format</DataField>
+        </Field>
+        <Field Name="CITIAMT2">
+          <DataField>CITIAMT2</DataField>
+        </Field>
+        <Field Name="CITIAMT2Format">
+          <DataField>CITIAMT2Format</DataField>
+        </Field>
+        <Field Name="InnovitiAMT2">
+          <DataField>InnovitiAMT2</DataField>
+        </Field>
+        <Field Name="InnovitiAMT2Format">
+          <DataField>InnovitiAMT2Format</DataField>
+        </Field>
+        <Field Name="PineLABSAMT2">
+          <DataField>PineLABSAMT2</DataField>
+        </Field>
+        <Field Name="PineLABSAMT2Format">
+          <DataField>PineLABSAMT2Format</DataField>
+        </Field>
+        <Field Name="LoyaltyRWAMT2">
+          <DataField>LoyaltyRWAMT2</DataField>
+        </Field>
+        <Field Name="LoyaltyRWAMT2Format">
+          <DataField>LoyaltyRWAMT2Format</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
+</Report>
